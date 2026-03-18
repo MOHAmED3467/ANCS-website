@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       // 🔥 حط هنا لينك GitHub Releases بتاعك
-      downloadLink: "https://github.com/username/repo/releases/download/v1.0/ANCS.exe"
+      downloadLink: "https://raw.githubusercontent.com/MOHAmED3467/ANCS-website/main/public/ANCS.exe"
     };
   }
 };
