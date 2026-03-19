@@ -52,7 +52,7 @@
           <h3>Other Download Options</h3>
           
           <div class="alt-grid">
-            <a href="https://github.com/MohamedBendari/ANCS" target="_blank" class="alt-card">
+            <a href="https://github.com/MOHAmED3467/ANCS-website" target="_blank" class="alt-card">
               <div class="alt-icon">
                 <i class="fab fa-github"></i>
               </div>
