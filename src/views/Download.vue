@@ -29,20 +29,23 @@
             </div>
 
             <div class="download-buttons">
-  <a 
-    href="https://raw.githubusercontent.com/MOHAmED3467/ANCS-website/main/public/ANCS.exe" 
-    class="btn primary"
-    download
-  >
-    <i class="fab fa-windows"></i>
-    Download for Windows
-  </a>
+              <!-- ✅ زرار التحميل بعد التعديل -->
+              <a 
+                href="https://raw.githubusercontent.com/MOHAmED3467/ANCS-website/main/public/ANCS.exe" 
+                class="btn primary"
+                download
+              >
+                <i class="fab fa-windows"></i>
+                Download for Windows
+              </a>
 
-  <a href="#" class="btn secondary">
-    <i class="fab fa-linux"></i>
-    Download for Linux
-  </a>
-</div>
+              <a href="#" class="btn secondary">
+                <i class="fab fa-linux"></i>
+                Download for Linux
+              </a>
+            </div>
+          </div>
+        </div>
 
         <!-- Alternative Downloads -->
         <div class="alt-downloads" data-aos="fade-up" data-aos-delay="200">
