@@ -17,7 +17,7 @@
             </div>
             <h2>ANCS v1.0.0</h2>
             <p class="version-info">Stable Release • Released March 2026</p>
-            
+
             <div class="system-requirements">
               <h4>System Requirements:</h4>
               <ul>
@@ -30,8 +30,8 @@
 
             <div class="download-buttons">
               <!-- ✅ زرار التحميل بعد التعديل -->
-              <a 
-                href="https://raw.githubusercontent.com/MOHAmED3467/ANCS-website/main/public/ANCS.exe" 
+              <a
+                href="https://raw.githubusercontent.com/MOHAmED3467/ANCS-website/main/public/ANCS.exe"
                 class="btn primary"
                 download
               >
@@ -50,7 +50,7 @@
         <!-- Alternative Downloads -->
         <div class="alt-downloads" data-aos="fade-up" data-aos-delay="200">
           <h3>Other Download Options</h3>
-          
+
           <div class="alt-grid">
             <a href="https://github.com/MOHAmED3467/ANCS-website" target="_blank" class="alt-card">
               <div class="alt-icon">
@@ -90,7 +90,7 @@
         <!-- Installation Steps -->
         <div class="installation-guide" data-aos="fade-up" data-aos-delay="300">
           <h3>Quick Installation Guide</h3>
-          
+
           <div class="steps">
             <div class="step">
               <div class="step-number">1</div>
@@ -180,6 +180,8 @@
   background: linear-gradient(135deg, #ffffff, #42a5f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .section-header p {

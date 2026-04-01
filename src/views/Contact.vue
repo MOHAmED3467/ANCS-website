@@ -1,43 +1,40 @@
+
 <template>
   <section class="contact">
     <div class="container">
-      <div class="contact-header" data-aos="fade-up">
+      <div class="contact-header">
         <h1>Get In Touch</h1>
         <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
       </div>
 
       <div class="contact-content">
-        <div class="contact-info" data-aos="fade-right">
+        <div class="contact-info">
           <div class="info-card">
             <i class="fas fa-envelope"></i>
             <h3>Email Us</h3>
-             <a href="mailto:mohamedsharkawy078@gmail.com" target="_blank"> mohamedsharkawy078@gmail.com </a>
+            <a href="mailto:mohamedsharkawy078@gmail.com" target="_blank">
+              mohamedsharkawy078@gmail.com
+            </a>
           </div>
-          
-          
-<div class="info-card">
-  <i class="fas fa-map-marker-alt"></i>
-  <h3>Location</h3>
 
-  <a 
-    href="https://www.google.com/maps?q=Cairo,Egypt" 
-    target="_blank"
-  >
-    Cairo, Egypt
-  </a>
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location</h3>
+            <a href="https://maps.google.com" target="_blank">
+              Cairo, Egypt
+            </a>
+          </div>
 
-</div>
-
-
-          
           <div class="info-card">
             <i class="fab fa-github"></i>
             <h3>GitHub</h3>
-            <a href="https://github.com/MohamedBendari" target="_blank">github.com/MohamedBendari</a>
+            <a href="https://github.com/MohamedBendari" target="_blank">
+              github.com/MohamedBendari
+            </a>
           </div>
         </div>
 
-        <form class="contact-form" @submit.prevent="submitForm" data-aos="fade-left">
+        <form class="contact-form" @submit.prevent="submitForm">
           <div class="form-group">
             <label for="name">Your Name</label>
             <input 
@@ -63,15 +60,14 @@
           </div>
 
           <div class="form-group">
-            <label for="subject">Subject</label>
-            <input 
-              type="text" 
-              id="subject"
-              v-model="form.subject" 
-              placeholder="How can we help?"
-              required
-              :disabled="isSubmitting"
-            >
+            <label for="purpose">Inquiry Purpose</label>
+            <select id="purpose" v-model="form.purpose" required :disabled="isSubmitting">
+             <option disabled value="">Select purpose</option>
+             <option value="buy">Buy ANCS</option>
+             <option value="support">Technical Support</option>
+             <option value="question">General Question</option>
+             <option value="partnership">Partnership</option>
+            </select>
           </div>
 
           <div class="form-group">
@@ -113,7 +109,7 @@ import { ref } from 'vue'
 const form = ref({
   name: '',
   email: '',
-  subject: '',
+  purpose: '',
   message: ''
 })
 
@@ -125,13 +121,13 @@ const submitForm = async () => {
   submitStatus.value = null
 
   try {
-    const response = await fetch('http://localhost:3000/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(form.value)
-    })
+    const response = await fetch('http://127.0.0.1:8000/api/messages/', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(form.value)
+})
 
     const data = await response.json()
 
@@ -141,8 +137,8 @@ const submitForm = async () => {
         icon: 'fas fa-check-circle',
         message: 'Message sent successfully! We\'ll get back to you soon.'
       }
-      // Reset form
-      form.value = { name: '', email: '', subject: '', message: '' }
+      // Reset form fields
+      form.value = { name: '', email: '', purpose: '', message: '' }
     } else {
       throw new Error(data.message || 'Something went wrong')
     }
@@ -182,6 +178,8 @@ const submitForm = async () => {
   background: linear-gradient(135deg, #ffffff, #42a5f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fff;
 }
 
 .contact-header p {
@@ -231,7 +229,6 @@ const submitForm = async () => {
   color: white;
 }
 
-.info-card p,
 .info-card a {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.7);
@@ -263,6 +260,7 @@ const submitForm = async () => {
 }
 
 .form-group input,
+.form-group select,
 .form-group textarea {
   width: 100%;
   padding: 14px 18px;
@@ -275,21 +273,17 @@ const submitForm = async () => {
   font-family: inherit;
 }
 
+.form-group select option {
+  background: #16293d;
+  color: white;
+}
+
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: #42a5f5;
   background: rgba(255, 255, 255, 0.08);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
 }
 
 .submit-btn {
@@ -319,12 +313,6 @@ const submitForm = async () => {
   cursor: not-allowed;
 }
 
-.loading {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .status-message {
   margin-top: 20px;
   padding: 16px;
@@ -347,43 +335,16 @@ const submitForm = async () => {
   color: #ef4444;
 }
 
-/* Responsive */
 @media (max-width: 968px) {
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info {
-    order: 2;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .info-card {
-    flex: 1;
-    min-width: 250px;
-  }
-
-  .contact-form {
-    order: 1;
-  }
+  .contact-content { grid-template-columns: 1fr; }
+  .contact-info { order: 2; flex-direction: row; flex-wrap: wrap; }
+  .info-card { flex: 1; min-width: 250px; }
+  .contact-form { order: 1; }
 }
 
 @media (max-width: 768px) {
-  .contact-header h1 {
-    font-size: 36px;
-  }
-
-  .contact-info {
-    flex-direction: column;
-  }
-
-  .info-card {
-    min-width: 100%;
-  }
-
-  .contact-form {
-    padding: 25px;
-  }
+  .contact-header h1 { font-size: 36px; }
+  .contact-info { flex-direction: column; }
+  .info-card { min-width: 100%; }
 }
 </style>

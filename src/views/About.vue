@@ -1,7 +1,7 @@
 <template>
   <section class="about-page">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
+      <div class="section-header">
         <span class="subtitle">Deep Dive into ANCS</span>
         <h1>Revolutionizing Network Management</h1>
         <p class="main-desc">
@@ -11,7 +11,7 @@
       </div>
 
       <div class="philosophy-grid">
-        <div class="p-card" data-aos="fade-right">
+        <div class="p-card">
           <div class="p-icon"><i class="fas fa-bullseye"></i></div>
           <h3>Technical Vision</h3>
           <p>
@@ -20,7 +20,7 @@
             graphical interfaces, allowing engineers to focus on architecture.
           </p>
         </div>
-        <div class="p-card" data-aos="fade-left">
+        <div class="p-card">
           <div class="p-icon blue"><i class="fas fa-shield-alt"></i></div>
           <h3>Why ANCS?</h3>
           <p>
@@ -32,34 +32,34 @@
       </div>
 
       <div class="workflow-section">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
           <h2>Operating Workflow</h2>
           <p>The journey of data within ANCS from discovery to execution</p>
         </div>
 
         <div class="workflow-steps">
-          <div class="step-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="step-card">
             <div class="step-badge">01</div>
             <div class="step-icon"><i class="fas fa-search-nodes"></i></div>
             <h3>Device Discovery</h3>
             <p>Automatic scanning of GNS3 environments or local networks to identify active devices and IP addresses.</p>
           </div>
 
-          <div class="step-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="step-card">
             <div class="step-badge">02</div>
             <div class="step-icon purple"><i class="fas fa-terminal"></i></div>
             <h3>Smart Scripting</h3>
             <p>An intelligent editor supporting Cisco and Juniper templates to ensure command accuracy and syntax compatibility.</p>
           </div>
 
-          <div class="step-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="step-card">
             <div class="step-badge">03</div>
             <div class="step-icon green"><i class="fas fa-brain"></i></div>
             <h3>AI Validation</h3>
             <p>Smart pre-execution reviews using machine learning to detect potential technical conflicts within logs.</p>
           </div>
 
-          <div class="step-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="step-card">
             <div class="step-badge">04</div>
             <div class="step-icon orange"><i class="fas fa-rocket"></i></div>
             <h3>Safe Deployment</h3>
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <div class="tech-highlights" data-aos="fade-up">
+      <div class="tech-highlights">
         <div class="section-header">
           <h2>Built with Industry Standards</h2>
           <p>The powerful technology stack behind our automation engine</p>
@@ -112,7 +112,7 @@
 /* Main Background & Typography */
 .about-page {
   min-height: 100vh;
-  padding: 100px 20px;
+  padding: 120px 20px 80px;
   background: linear-gradient(135deg, #0b1c2c 0%, #16293d 100%);
   color: #ffffff;
   font-family: 'Inter', sans-serif;
@@ -147,6 +147,8 @@ h1 {
   background: linear-gradient(135deg, #fff, #42a5f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fff;
 }
 
 .main-desc { 
