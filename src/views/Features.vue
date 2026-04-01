@@ -284,4 +284,44 @@
     padding: 30px 25px;
   }
 }
+
+@media (max-width: 600px) {
+  .features {
+    padding: 90px 20px 60px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h1 {
+    font-size: 28px;
+  }
+
+  .section-header p {
+    font-size: 16px;
+  }
+
+  .feature-card {
+    padding: 20px 16px;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+
+  .feature-list li {
+    font-size: 12px;
+  }
+}
 </style>

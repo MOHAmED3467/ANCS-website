@@ -37,10 +37,10 @@
         <form class="contact-form" @submit.prevent="submitForm">
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               id="name"
-              v-model="form.name" 
+              v-model="form.name"
               placeholder="John Doe"
               required
               :disabled="isSubmitting"
@@ -49,10 +49,10 @@
 
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input 
-              type="email" 
+            <input
+              type="email"
               id="email"
-              v-model="form.email" 
+              v-model="form.email"
               placeholder="john@example.com"
               required
               :disabled="isSubmitting"
@@ -72,9 +72,9 @@
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea 
+            <textarea
               id="message"
-              v-model="form.message" 
+              v-model="form.message"
               placeholder="Tell us more about your inquiry..."
               rows="5"
               required
@@ -346,5 +346,54 @@ const submitForm = async () => {
   .contact-header h1 { font-size: 36px; }
   .contact-info { flex-direction: column; }
   .info-card { min-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 90px 20px 60px;
+  }
+
+  .contact-header {
+    margin-bottom: 40px;
+  }
+
+  .contact-header h1 {
+    font-size: 28px;
+  }
+
+  .contact-header p {
+    font-size: 16px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-submit {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .info-card {
+    padding: 16px;
+  }
+
+  .info-card h4 {
+    font-size: 14px;
+  }
+
+  .info-card p {
+    font-size: 12px;
+  }
 }
 </style>

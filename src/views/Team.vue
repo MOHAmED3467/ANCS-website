@@ -299,4 +299,42 @@
     margin: 0 auto;
   }
 }
+
+@media (max-width: 600px) {
+  .team {
+    padding: 90px 20px 60px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h1 {
+    font-size: 28px;
+  }
+
+  .section-header p {
+    font-size: 16px;
+  }
+
+  .team-grid {
+    max-width: 100%;
+  }
+
+  .team-card {
+    padding: 20px;
+  }
+
+  .team-card h3 {
+    font-size: 16px;
+  }
+
+  .team-card p {
+    font-size: 13px;
+  }
+
+  .member-role {
+    font-size: 12px;
+  }
+}
 </style>

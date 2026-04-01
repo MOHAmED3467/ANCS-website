@@ -214,4 +214,52 @@
   transition: color 0.2s;
 }
 .quick-links a:hover { color: #42a5f5; }
+
+@media (max-width: 600px) {
+  .not-found {
+    padding: 80px 16px;
+  }
+
+  .error-code {
+    font-size: clamp(60px, 15vw, 100px);
+    letter-spacing: -3px;
+    margin-bottom: 16px;
+  }
+
+  .divider {
+    width: 40px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .desc {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .actions {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .quick-links {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .quick-links a {
+    font-size: 12px;
+  }
+}
 </style>

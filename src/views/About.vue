@@ -5,7 +5,7 @@
         <span class="subtitle">Deep Dive into ANCS</span>
         <h1>Revolutionizing Network Management</h1>
         <p class="main-desc">
-          Discover ANCS, the ultimate solution for automating network configurations 
+          Discover ANCS, the ultimate solution for automating network configurations
           and minimizing human error through advanced AI-driven insights.
         </p>
       </div>
@@ -15,8 +15,8 @@
           <div class="p-icon"><i class="fas fa-bullseye"></i></div>
           <h3>Technical Vision</h3>
           <p>
-            We aim to transform how network engineers interact with the CLI. 
-            Our goal is to convert complex text-based commands into intuitive 
+            We aim to transform how network engineers interact with the CLI.
+            Our goal is to convert complex text-based commands into intuitive
             graphical interfaces, allowing engineers to focus on architecture.
           </p>
         </div>
@@ -24,8 +24,8 @@
           <div class="p-icon blue"><i class="fas fa-shield-alt"></i></div>
           <h3>Why ANCS?</h3>
           <p>
-            ANCS provides a validation layer that analyzes commands before execution, 
-            backed by an automated recovery system to restore stability instantly 
+            ANCS provides a validation layer that analyzes commands before execution,
+            backed by an automated recovery system to restore stability instantly
             in case of network blackouts.
           </p>
         </div>
@@ -73,7 +73,7 @@
           <h2>Built with Industry Standards</h2>
           <p>The powerful technology stack behind our automation engine</p>
         </div>
-        
+
         <div class="tech-cards-grid">
           <div class="tech-mini-card">
             <div class="mini-icon"><i class="fab fa-python"></i></div>
@@ -119,31 +119,31 @@
   overflow-x: hidden;
 }
 
-.container { 
-  max-width: 1200px; 
-  margin: 0 auto; 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Header Styles */
-.section-header { 
-  text-align: center; 
-  margin-bottom: 60px; 
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.subtitle { 
-  color: #42a5f5; 
-  font-weight: 700; 
-  text-transform: uppercase; 
-  letter-spacing: 2px; 
+.subtitle {
+  color: #42a5f5;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   font-size: 14px;
-  display: block; 
-  margin-bottom: 15px; 
+  display: block;
+  margin-bottom: 15px;
 }
 
-h1 { 
-  font-size: clamp(2.5rem, 5vw, 3.5rem); 
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   background: linear-gradient(135deg, #fff, #42a5f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -151,26 +151,26 @@ h1 {
   color: #fff;
 }
 
-.main-desc { 
-  color: rgba(255,255,255,0.7); 
-  max-width: 800px; 
-  margin: 0 auto; 
+.main-desc {
+  color: rgba(255,255,255,0.7);
+  max-width: 800px;
+  margin: 0 auto;
   font-size: 1.1rem;
-  line-height: 1.7; 
+  line-height: 1.7;
 }
 
 /* Philosophy Grid */
-.philosophy-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-  gap: 30px; 
-  margin-bottom: 100px; 
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 100px;
 }
 
-.p-card { 
-  background: rgba(255, 255, 255, 0.03); 
-  padding: 40px; 
-  border-radius: 24px; 
+.p-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px;
+  border-radius: 24px;
   border: 1px solid rgba(255,255,255,0.08);
   transition: transform 0.3s ease;
 }
@@ -295,5 +295,50 @@ h1 {
   .philosophy-grid { grid-template-columns: 1fr; }
   .workflow-steps { grid-template-columns: 1fr; gap: 40px; }
   .tech-cards-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 90px 20px 60px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-header p {
+    font-size: 14px;
+  }
+
+  .philosophy-card,
+  .tech-card {
+    padding: 20px;
+  }
+
+  .philosophy-card h3,
+  .tech-card h3 {
+    font-size: 14px;
+  }
+
+  .philosophy-card p,
+  .tech-card p {
+    font-size: 12px;
+  }
+
+  .workflow-step {
+    padding: 20px;
+  }
+
+  .workflow-step h4 {
+    font-size: 14px;
+  }
+
+  .workflow-step p {
+    font-size: 12px;
+  }
 }
 </style>

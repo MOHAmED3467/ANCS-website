@@ -399,6 +399,13 @@ const logout = () => {
   background: rgba(11, 28, 44, 0.98);
   transform: translateY(-10px); opacity: 0;
   pointer-events: none; transition: all 0.3s ease;
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
 .mobile-menu a {

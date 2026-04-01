@@ -482,4 +482,41 @@ const handleSignup = async () => {
   .auth-left { display: none; }
   .auth-right { padding: 40px 24px; }
 }
+
+@media (max-width: 600px) {
+  .auth {
+    padding: 80px 16px;
+  }
+
+  .auth-right {
+    padding: 24px 16px;
+  }
+
+  .auth-form h2 {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .form-footer {
+    font-size: 12px;
+  }
+
+  .auth-tabs button {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}
 </style>

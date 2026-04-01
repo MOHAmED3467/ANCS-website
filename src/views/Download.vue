@@ -535,6 +535,10 @@
 }
 
 @media (max-width: 768px) {
+  .download {
+    padding: 90px 20px 60px;
+  }
+
   .section-header h1 {
     font-size: 36px;
   }
@@ -549,6 +553,60 @@
 
   .download-buttons .btn {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .download {
+    padding: 80px 16px 50px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h1 {
+    font-size: 28px;
+  }
+
+  .section-header p {
+    font-size: 16px;
+  }
+
+  .download-card {
+    padding: 25px 16px;
+  }
+
+  .alt-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .alt-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .download-buttons {
+    gap: 10px;
+  }
+
+  .download-buttons .btn {
+    font-size: 13px;
+    padding: 14px 24px;
+  }
+
+  .steps {
+    gap: 15px;
+  }
+
+  .step {
+    padding: 20px 16px;
+  }
+
+  .support-card {
+    padding: 30px 20px;
   }
 }
 </style>
